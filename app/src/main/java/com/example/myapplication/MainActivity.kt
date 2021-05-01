@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         }catch (e: Exception){
             e.printStackTrace()
         }
-        btn_add.setOnClickListener {
+        button4.setOnClickListener {
             val dialog=Dialog(this)
             dialog.setContentView(R.layout.form_text)
             dialog.setTitle("Add song lyrics")
