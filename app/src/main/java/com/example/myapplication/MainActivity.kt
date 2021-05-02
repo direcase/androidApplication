@@ -41,15 +41,20 @@ class MainActivity : AppCompatActivity() {
             dialog.setTitle("Add song lyrics")
             dialog.button.setOnClickListener {
                 //val text=song.text.toString()
-                val text=dialog.SongText.text.toString()
-                val fileOutputStream: FileOutputStream
-                try {
-                    fileOutputStream= openFileOutput("song1.txt", Context.MODE_PRIVATE)
-                    fileOutputStream.write(text.toByteArray())
+                val text=dialog.textInputLayout1.text.toString()
+                var fileOutputStream: FileOutputStream
+                dialog.button.setOnClickListener {
+                    try {
+                        fileOutputStream= openFileOutput("song1.txt", Context.MODE_PRIVATE)
+                        var s=" "
+                        fileOutputStream.write(textSong.text.toString().toByteArray()+s.toByteArray()+text.toByteArray())
 
-                }catch (e:Exception){
-                    e.printStackTrace()
+                    }catch (e:Exception){
+                        e.printStackTrace()
+                    }
+                    dialog.hide()
                 }
+
             }
             dialog.show()
         }

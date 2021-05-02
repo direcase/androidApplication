@@ -30,6 +30,7 @@
         tools:layout_editor_absoluteX="26dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputLayout1"
             android:layout_width="320dp"
             android:layout_height="107dp"
             android:hint="hint" />
